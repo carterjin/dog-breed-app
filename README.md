@@ -24,5 +24,9 @@ The corresponding Jupyter notebook and detailed analysis is seen here:
 2. Install the required tools or packages, as seen above.
 3. Run with Python in the app directory: ```python run.py```
 4. Open browser and enter ```127.0.0.1:3001```
-5. Click 'go' and select your image and then click 'Submit'
+
+![](images/master_page.png)
+5. Click 'go' and then click choose file to select your image and then click 'Submit'.
+
+![](images/upload_page.png)
 
