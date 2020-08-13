@@ -1,10 +1,7 @@
-import json
-import plotly
 import os
 
 from flask import Flask
 from flask import render_template, request, flash, redirect, url_for
-from plotly.graph_objs import Bar
 from werkzeug.utils import secure_filename
 from dog_breed_predict import DogBreedPredict
 
@@ -34,38 +31,7 @@ pred = DogBreedPredict()
 @app.route('/index')
 def index():
     
-    # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
-    
-    # create visuals
-    # TODO: Below is an example - modify to create your own visuals
-    graphs = [
-        {
-            'data': [
-                Bar(
-                    x=['a','b'],
-                    y=[1,2]
-                )
-            ],
-
-            'layout': {
-                'title': 'Distribution of Message Genres',
-                'yaxis': {
-                    'title': "Count"
-                },
-                'xaxis': {
-                    'title': "Genre"
-                }
-            }
-        }
-    ]
-    
-    # encode plotly graphs in JSON
-    ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
-    graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
-    
-    # render web page with plotly graphs
-    return render_template('master.html', ids=ids, graphJSON=graphJSON)
+    return render_template('master.html')
 
 
 # web page that handles user query and displays model results
