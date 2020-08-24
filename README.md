@@ -48,6 +48,6 @@ The corresponding Jupyter notebook and detailed analysis is seen here:
 			
 		dog_breed_predict.py: Contains the algorithm to predict dog breeds, which is imported by run.py
 		
-		resnet50_dog_predict_model: The model with pretrained weights which is loaded by dog_breed_predict.py
+		resnet50_dog_predict_model: A pretrained model which is loaded by dog_breed_predict.py
 		
 		run.py: Runs the Flask app.
