@@ -30,3 +30,15 @@ The corresponding Jupyter notebook and detailed analysis is seen here:
 
 ![](images/upload_page.png)
 
+## Files in this Repo
+
+app
+    haarcascades
+		haarcascade_frontalface_alt.xml: Used for face detection in human detector
+	static/uploads: A folder to save the uploaded image
+	templates
+	    master.html: A welcome page with title and contact info etc.
+		upload.html: The page where you upload the image and dog breed is predicted.
+	dog_breed_predict.py: Contains the algorithm to predict dog breeds, which is imported by run.py
+	resnet50_dog_predict_model: The model with pretrained weights which is loaded by dog_breed_predict.py
+	run.py: Runs the Flask app.
